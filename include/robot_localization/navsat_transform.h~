@@ -78,9 +78,13 @@ namespace RobotLocalization
       void gpsFixCallback(const sensor_msgs::NavSatFixConstPtr& msg);
       void imuCallback(const sensor_msgs::ImuConstPtr& msg);
 
-      //! @brief Computes the transform from the UTM frame to the odom frame
+      //! @brief Computes the transform from the UTM frame to the
+      //! odom frame
+      //!
       void computeTransform();
+
       //! @brief Prepares the GPS odometry message before sending
+      //!
       bool prepareGpsOdometry(nav_msgs::Odometry &gpsOdom);
   };
 }

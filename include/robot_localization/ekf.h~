@@ -18,8 +18,9 @@ namespace RobotLocalization
   class Ekf: public FilterBase
   {
     public:
-//CONSTRUCTOR AND DECONSTRUCTOR
+      //! @brief Constructor for the Ekf class
       Ekf();
+      //! @brief Destructor for the Ekf class
       ~Ekf();
     protected:
       //! @brief Carries out the correct step in the predict/update cycle.
@@ -28,7 +29,7 @@ namespace RobotLocalization
       //!
       void correct(const Measurement &measurement);
 
-      //! @brief Carries out the predict step in the predict/update cycle.//A PROCESS OF KALMAN FILTER PREDICTION-CORRECTION STEP
+      //! @brief Carries out the predict step in the predict/update cycle.
       //!
       //! Projects the state and error matrices forward using a model of
       //! the vehicle's motion.
